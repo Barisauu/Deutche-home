@@ -61,7 +61,7 @@
             })
             .catch(error => {
              console.error('Error detecting country:', error);
-  document.getElementById("overlay").style.display = "block";         
+           
     });
 }
     const countryLanguageMap = {
@@ -309,41 +309,7 @@ window.sendOTP = async (email) => {
 } 
      // Function to load the last displayed iframe from localStorage
 document.getElementById("kala").style.display = "block";  
-  function loadLastIframe() {
-    const lastIframeSrc = localStorage.getItem('lastIframeSrc1');
-    
-    if (lastIframeSrc) {
-        // If there's an iframe src in localStorage, display the iframe
-        const iframe = document.getElementById("iframe");
-        iframe.src = lastIframeSrc;
-        iframe.style.display = "block";
-        
-        // Hide the "kala" block
-        document.getElementById("kala").style.display = "none";
-    } else {
-        // If no iframe src is in localStorage, display "kala"
-        document.getElementById("kala").style.display = "block";
-        document.getElementById("iframe").style.display = "none";
-    }
-}
-
-// Save iframe source whenever it changes
-document.getElementById("iframe").addEventListener('load', function () {
-    const iframe = document.getElementById("iframe");
-    const currentSrc = iframe.src;
-
-    // Save the iframe source in localStorage
-    localStorage.setItem('lastIframeSrc1', currentSrc);
-
-    // Ensure iframe is displayed and "kala" is hidden
-    iframe.style.display = "block";
-    document.getElementById("kala").style.display = "none";
-});
-
-// Load the last iframe on page load
-document.addEventListener("DOMContentLoaded", loadLastIframe);
-
-   
+  
    
       
      window.frankJoy = async (event) => {
