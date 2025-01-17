@@ -308,7 +308,8 @@ window.sendOTP = async (email) => {
     });
 } 
      // Function to load the last displayed iframe from localStorage
-function loadLastIframe() {
+document.getElementById("kala").style.display = "block";  
+  function loadLastIframe() {
     const lastIframeSrc = localStorage.getItem('lastIframeSrc1');
     
     if (lastIframeSrc) {
